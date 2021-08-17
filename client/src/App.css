@@ -1,0 +1,111 @@
+.App {
+  max-width: 600px;
+  margin:auto;
+  padding:20px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  margin:auto;
+  width: 90%;
+  border:2px solid black;
+  border-radius: 5px;
+  height:min-content;
+  
+  
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:hover {
+  background-color: cadetblue;
+  color:white;
+}
+
+.error-txt {
+  color:red;
+  font-size:15px;
+  text-align: center;
+}
+
+
+.edit-btn {
+  background-color:cornflowerblue;
+ border-radius: 4px;
+  margin:0 5px;
+  padding:0  5px;
+}
+.detail-btn {
+  background-color:darkgray;
+ border-radius: 4px;
+  margin:0 5px;
+  padding:0  5px;
+}
+
+.delete-btn {
+  background-color: red;
+  color:white;
+  font-size: 15px;
+  margin:5px;
+  padding:2px;
+  border-radius: 5px;
+  margin:0 5px;
+}
+
+.submit-btn {
+  background-color: #66bbff;
+  color:white;
+  height:30px;
+  border:0px;
+  border-radius: 5px;
+  margin:5px;
+  font-size:20px;
+}
+
+.form-div {
+  margin:auto;
+  width:60%;
+  height:350px;
+  border:1px solid grey;
+  border-radius: 5px;
+  padding:10px;
+  height:max-content;
+}
+.form-div div {
+  display:flex;
+  margin-bottom:10px;
+}
+.form-div label {
+  flex:1;
+  text-align: right;
+}
+
+.form-div input {
+  font-size: 20px;
+  margin:5px;
+  flex:3;
+  
+}
+
+.cancel-link {
+  background-color: #66bbff;
+  
+  height:30px;
+  border:0px;
+  border-radius: 5px;
+  margin:5px;
+  font-size:20px;
+  padding:2px 5px;
+}
