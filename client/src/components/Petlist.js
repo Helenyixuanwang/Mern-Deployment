@@ -1,23 +1,23 @@
 import React from 'react';
 
 import { Link } from '@reach/router';
-import Delete from './Delete';
+
 
 
 const Petlist = (props) => {
     
-    // const { formSubmittedBoolean, setFormSubmittedBoolean} = props;
-    const { pets, setPets } = props;
+    
+    const { pets } = props;
 
-    const updateAfterDelete=(deletedPetId)=> {
-        const filteredArray = pets.filter((petObj)=>{
+    // const updateAfterDelete=(deletedPetId)=> {
+    //     const filteredArray = pets.filter((petObj)=>{
         
-            return petObj._id !== deletedPetId;
-        });
+    //         return petObj._id !== deletedPetId;
+    //     });
         
-        setPets(filteredArray);
+    //     setPets(filteredArray);
         
-    }
+    // }
     
     return (
         <div>

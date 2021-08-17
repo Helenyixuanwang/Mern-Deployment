@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import Create from '../components/Create';
+
 import Petlist from '../components/Petlist';
-import { navigate,Link } from '@reach/router';
+import { Link } from '@reach/router';
 
 const Main = () => {
     const [pets, setPets] = useState([]);
