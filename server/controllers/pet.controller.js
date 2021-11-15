@@ -1,7 +1,7 @@
 const Pet = require('../models/pet.model');
 
 module.exports.getAll = (req,res) => {
-    Pet.find().sort("type")  //find and list according to field "type"
+    Pet.find().sort("type")  //find and list according to field "type", sort by creation time use sort("ObjectId")
     .then((pets) => {
         console.log("inside get all");
         console.log(pets);

@@ -12,7 +12,7 @@ const Delete = (props) => {
         .then((res)=>{
             console.log("pet deleted: ");
             console.log(res.data);
-            //run the specific code for after the delete is successful
+            //run the specific code for after the delete is successful. here "petId" is not necessary because after delete, the edit page redirect to homepage and it does not need the special Id to do the redirection.If it keeps in the same page to do the delete, Id is needed. I kept the petId in the exam version, but it does not matter.
             afterDelete(petId);
         } )
         .catch((err)=> console.log(err))
