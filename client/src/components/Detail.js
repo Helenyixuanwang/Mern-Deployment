@@ -7,6 +7,9 @@ import Delete from './Delete';
 const Detail = (props) => {
     const { id } = props; //this comes from the routes' URL
     const [ pet, setPet ] = useState({});
+    const [likes, setLikes] = useState(0);//initial likes set to zero
+    const [ hasLiked, setHasLiked] = useState(false);//boolean value to disable the likes button once 
+                                                    //button has been clicked
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/pets/"+ id)
@@ -17,6 +20,10 @@ const Detail = (props) => {
         .catch((err) => console.log(err))
         //alrays remember the dependency array--empty is fine
         },[]);
+const likesClickHandler = (e) => {
+    setLikes(likes + 1);
+    setHasLiked(true);
+}
 
 const redirectAfterDelete=()=> {
     navigate("/");
@@ -35,13 +42,21 @@ const redirectAfterDelete=()=> {
         <ul >
             <li ><span style={{fontWeight:"bolder"}}>Pet type:</span>   {pet.type}</li>
             <li><span style={{fontWeight:"bolder"}}>Description:</span> {pet.description}</li>
+            <li><span style={{fontWeight:"bolder"}}>Likes :</span> {likes}</li>
             <li><span style={{fontWeight:"bolder"}}>Skills:</span></li>
                 <ul>
                     <li>{pet.skill1}</li>
                     <li>{pet.skill2}</li>
                     <li>{pet.skill3}</li>
+
                 </ul>
         </ul>
+        <button 
+        onClick={(e)=> likesClickHandler(e)}
+        disabled = {hasLiked}
+        >Like {pet.name}
+       
+        </button>
         </div>
         
         
